@@ -15,8 +15,41 @@ namespace CarLotSimulator
 
 
             //Now that the Car class is created we can instanciate 3 new cars
+            var cars = new Car();
+
+            var focus = new Car();
+            focus.HonkNoise = "Loud";
+            focus.IsDriveable = true;
+            focus.Make = "Ford";
+            focus.Model = "Focus";
+            focus.Year = 2023;
+            focus.EngineNoise = "Roar";
+
+            var srt = new Car();
+            srt.HonkNoise ="Horn";
+            srt.IsDriveable = true;
+            srt.Make = "Jeep";
+            srt.Model = "SRT";
+            srt.Year = 2023;
+            srt.EngineNoise = "Trex";
+
+            var carrola = new Car();
+            carrola.HonkNoise = "cute";
+            carrola.IsDriveable = true;
+            carrola.Make = "Toyota";
+            carrola.Model = "Carolla";
+            carrola.Year = 2021;
+            carrola.EngineNoise = "Mouse";
+
+
             //Set the properties for each of the cars
             //Call each of the methods for each car
+            focus.MakeEngineNoise(focus.EngineNoise);
+            srt.MakeEngineNoise(srt.EngineNoise);
+            carrola.MakeEngineNoise(carrola.EngineNoise);
+            focus.MakeHonkNoise(focus.HonkNoise);
+            srt.MakeHonkNoise(srt.HonkNoise);
+            carrola.MakeHonkNoise(carrola.HonkNoise);
 
             //*************BONUS*************//
 

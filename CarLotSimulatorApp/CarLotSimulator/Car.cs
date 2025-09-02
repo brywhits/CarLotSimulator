@@ -8,6 +8,11 @@ public class Car
     //Car shall have the following properties: Year, Make, Model, EngineNoise, HonkNoise, IsDriveable
     //Car shall have the following methods: MakeEngineNoise(), MakeHonkNoise()
     //The methods should take one string parameter: the respective noise property
+
+    public Car()
+    {
+        CarLot.numberOfCars++;
+    }
     
     public int Year { get; set; }
     public string Make { get; set; }
@@ -30,18 +35,17 @@ public class Car
         HonkNoise = honkNoise;
         Console.WriteLine($"{Make} {Model} has a honk noise that sounds like {HonkNoise}.");
     }
-
-    public Car()
+    
+    public Car(int year, string make, string model, string engineNoise, string honkNoise, bool isDriveable )
     {
-        
-    }
-
-    public Car(string make, string model, int year, bool isDriveable)
-    {
+        Year = year;
         Make = make;
         Model = model;
-        Year = year;
+        EngineNoise = engineNoise;
+        HonkNoise = honkNoise;
         IsDriveable = isDriveable;
+        
+        CarLot.numberOfCars++;
     }
     
     

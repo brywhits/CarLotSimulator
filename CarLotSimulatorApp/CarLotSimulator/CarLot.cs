@@ -9,7 +9,7 @@ public class CarLot
     {
     }
 
-    public static int numberOfCars; // static field
+    public static int numberOfCars = 0; // static field
     
     public List<Car> Cars = new List<Car>();
 
